@@ -1,0 +1,14 @@
+.header{
+	grid-area: h;
+	background-color: burlywood;
+	display: grid;
+	grid-template-columns: 1fr 10fr;
+}
+.logotip{
+	width: 70px;
+}
+.contentHeader{
+	text-align: center;
+	font-size: 35px;
+	margin-bottom: 15px;
+}
