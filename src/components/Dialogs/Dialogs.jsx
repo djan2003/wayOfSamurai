@@ -12,21 +12,18 @@ const DialogsItem = (props) => {
     )
 }
 
-const Dialogs = () => {
-    let dialogsData = [
-        {name : "Vasia", id : 1},
-        {name : "Petia", id : 2},
-        {name : "Olia", id : 3},
-        {name : "Kolia", id : 4},
-        {name : "Oleg", id : 5}
-    ]
-    let dialogsElement = dialogsData.map(d => <DialogsItem name= {d.name} id={d.id}/>)
-    let messageData = [
-        {name : "Hi", id : 1},
-        {name : "how are you", id : 2},
-        {name : "every thing ok", id : 3}
-    ]
-    let messageElement = messageData.map(m => <div className={s.message}>{m.name}</div> )
+const Dialogs = (props) => {
+
+    let dialogsElement = props.dialogsData.map(d => <DialogsItem name= {d.name} id={d.id}/>)
+
+    let messageElement = props.messageData.map(m => <div className={s.message}>{m.name}</div> )
+    let addMessage = ()=>{props.dispatch({type: "addMessage"})
+    }
+    let newMessageElement = React.createRef()
+    let onMessageChange = ()=>{
+        let text = newMessageElement.current.value;
+        props.dispatch({type: "updateNewMessage" ,newMessage:text});
+    }
     return (
         <div className={s.dialogs}>
             <div className={s.dialodsItem}>
@@ -35,6 +32,12 @@ const Dialogs = () => {
 
             <div className={s.messages}>
                 {messageElement}
+            </div>
+            <div>
+                <textarea onChange={onMessageChange} ref={newMessageElement} value = {props.newMessageText}></textarea >
+            </div>
+            <div>
+                <button onClick={addMessage}>Добавить сообщение</button>
             </div>
         </div>
 

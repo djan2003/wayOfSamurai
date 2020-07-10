@@ -3,21 +3,25 @@ import Post from "./post/Post";
 import s from "./MyPosts.module.css"
 
 
-const MyPosts = () => {
-    let message = [
-        {name : "10", id : 1},
-        {name : "а тебе зачем это знать", id : 2},
-        {name : "еще одна проверка", id : 2}
-    ]
-    let postElement = message.map(p =><Post age={p.name}/> )
+const MyPosts = (props) => {
+    let addPost = ()=>{
+         props.dispatch({type: "addPost"});
+
+    }
+    let onPostChange = ()=>{
+        let text=newPostElement.current.value;
+        props.dispatch({type: "updateNewPost", newText:text });
+    }
+    let postElement = props.message.map(p =><Post age={p.name}/> )
+    let newPostElement = React.createRef()
     return (
         <section className={s.AllBlock}>
             <div>
                <h2> My posts</h2>
             </div>
-            <textarea></textarea>
+            <textarea onChange={onPostChange} ref={newPostElement} value = {props.newPostText}/>
             <div>
-                <button>Add post</button>
+                <button onClick={addPost} >Add post</button>
             </div>
             <div>
                 {postElement}
