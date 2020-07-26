@@ -11,7 +11,6 @@ import ProfileInfo from "./components/Profile/ProfileInfo/profileInfo";
 import {addPost, updateNewMessage, updateNewPost} from "./redux/state";
 
 const App = (props) => {
-
     return (
         < BrowserRouter >
         < section
