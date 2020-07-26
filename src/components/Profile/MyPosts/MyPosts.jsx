@@ -1,16 +1,17 @@
 import React from 'react';
 import Post from "./post/Post";
 import s from "./MyPosts.module.css"
+import {addPostActionCreator, ubdateNewPostActionCreator} from "../../../redux/profileReduser";
 
 
 const MyPosts = (props) => {
     let addPost = ()=>{
-         props.dispatch({type: "addPost"});
+         props.dispatch(addPostActionCreator());
 
     }
     let onPostChange = ()=>{
         let text=newPostElement.current.value;
-        props.dispatch({type: "updateNewPost", newText:text });
+        props.dispatch(ubdateNewPostActionCreator(text));
     }
     let postElement = props.message.map(p =><Post age={p.name}/> )
     let newPostElement = React.createRef()

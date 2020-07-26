@@ -200,3 +200,34 @@
 [0710/091139.307:ERROR:crash_report_database_win.cc(469)] failed to stat report
 [0710/092639.310:ERROR:crash_report_database_win.cc(469)] failed to stat report
 [0710/094139.321:ERROR:crash_report_database_win.cc(469)] failed to stat report
+[0722/200634.759:ERROR:crash_report_database_win.cc(469)] failed to stat report
+[0722/201602.927:ERROR:crash_report_database_win.cc(469)] failed to stat report
+[0722/201634.769:ERROR:crash_report_database_win.cc(469)] failed to stat report
+[0722/201634.769:ERROR:crash_report_database_win.cc(469)] failed to stat report
+[0722/202134.876:ERROR:crash_report_database_win.cc(469)] failed to stat report
+[0722/203634.884:ERROR:crash_report_database_win.cc(469)] failed to stat report
+[0722/205135.094:ERROR:crash_report_database_win.cc(469)] failed to stat report
+[0722/210635.130:ERROR:crash_report_database_win.cc(469)] failed to stat report
+[0723/132337.626:ERROR:crash_report_database_win.cc(469)] failed to stat report
+[0723/133337.630:ERROR:crash_report_database_win.cc(469)] failed to stat report
+[0723/133337.630:ERROR:crash_report_database_win.cc(469)] failed to stat report
+[0723/133837.679:ERROR:crash_report_database_win.cc(469)] failed to stat report
+[0723/135337.809:ERROR:crash_report_database_win.cc(469)] failed to stat report
+[0723/140837.810:ERROR:crash_report_database_win.cc(469)] failed to stat report
+[0723/142337.897:ERROR:crash_report_database_win.cc(469)] failed to stat report
+[0723/143837.898:ERROR:crash_report_database_win.cc(469)] failed to stat report
+[0723/144353.319:ERROR:process_info.cc(329)] VirtualQueryEx: Отказано в доступе. (0x5)
+[0723/144353.444:ERROR:process_info.cc(556)] ReadMemoryInfo failed
+[0723/144353.444:ERROR:process_memory_win.cc(39)] Failed to initialize ProcessInfo.
+[0723/144353.444:ERROR:scoped_process_suspend.cc(40)] NtResumeProcess: Попытка доступа к процессу, выполняющему процедуру завершения. (0xc000010a)
+[0723/184513.429:ERROR:crash_report_database_win.cc(469)] failed to stat report
+[0724/165258.624:ERROR:crash_report_database_win.cc(469)] failed to stat report
+[0724/170258.772:ERROR:crash_report_database_win.cc(469)] failed to stat report
+[0724/170258.772:ERROR:crash_report_database_win.cc(469)] failed to stat report
+[0724/170758.645:ERROR:crash_report_database_win.cc(469)] failed to stat report
+[0724/172258.652:ERROR:crash_report_database_win.cc(469)] failed to stat report
+[0724/173758.658:ERROR:crash_report_database_win.cc(469)] failed to stat report
+[0726/103405.780:ERROR:crash_report_database_win.cc(469)] failed to stat report
+[0726/104405.791:ERROR:crash_report_database_win.cc(469)] failed to stat report
+[0726/104405.791:ERROR:crash_report_database_win.cc(469)] failed to stat report
+[0726/104905.803:ERROR:crash_report_database_win.cc(469)] failed to stat report

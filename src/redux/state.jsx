@@ -1,3 +1,6 @@
+import profileReduser from "./profileReduser";
+import dialogsReduser from "./dialogsReduser";
+
 export let store = {
     _state : {
         friends:
@@ -75,33 +78,10 @@ export let store = {
     },
 
     dispatch(action) {
-        if (action.type === "updateNewPost" ) {
-            this._state.profilePage.newPostText = action.newText;
-            this.rerender(this._state);
-        }
-        else if (action.type === "addPost"){
-            let nextPost = {
-                id: 5,
-                name: this._state.profilePage.newPostText
-            }
-            this._state.profilePage.message.push(nextPost);
-            this._state.profilePage.newPostText = " ";
-            this.rerender( this._state);
-        }
-        else if (action.type === "addMessage"){
-            let nextMessage = {
-                id: 3,
-                name: this._state.dialogsPage.newMessageText
-            }
-            this._state.dialogsPage.messageData.push(nextMessage);
-            this._state.dialogsPage.newMessageText = " ";
-            this.rerender(this._state);
-        }
-        else if (action.type === "updateNewMessage"){
-            this._state.dialogsPage.newMessageText = action.newMessage;
-            this.rerender(this._state);
-        }
-    }
+        this._state.profilePage = profileReduser(this._state.profilePage, action);
+        this._state.dialogsPage = dialogsReduser(this._state.dialogsPage, action);
+        this.rerender(this._state);}
+
 
 
 }
