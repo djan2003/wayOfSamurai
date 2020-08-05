@@ -1,17 +1,16 @@
 import React from 'react';
 import Post from "./post/Post";
 import s from "./MyPosts.module.css"
-import {addPostActionCreator, ubdateNewPostActionCreator} from "../../../redux/profileReduser";
 
 
 const MyPosts = (props) => {
-    let addPost = ()=>{
-         props.dispatch(addPostActionCreator());
+    let OnAddPost = ()=>{
+         props.addPost();
 
     }
     let onPostChange = ()=>{
         let text=newPostElement.current.value;
-        props.dispatch(ubdateNewPostActionCreator(text));
+        props.updateNewPost(text)
     }
     let postElement = props.message.map(p =><Post age={p.name}/> )
     let newPostElement = React.createRef()
@@ -22,7 +21,7 @@ const MyPosts = (props) => {
             </div>
             <textarea onChange={onPostChange} ref={newPostElement} value = {props.newPostText}/>
             <div>
-                <button onClick={addPost} >Add post</button>
+                <button onClick={OnAddPost} >Add post</button>
             </div>
             <div>
                 {postElement}

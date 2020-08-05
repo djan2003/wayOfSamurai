@@ -7,8 +7,8 @@ import Dialogs from "./components/Dialogs/Dialogs"
 import Music from "./components/Music/Music";
 import Others from "./components/Others/Others";
 import {BrowserRouter, Route} from "react-router-dom";
-import ProfileInfo from "./components/Profile/ProfileInfo/profileInfo";
-import {addPost, updateNewMessage, updateNewPost} from "./redux/state";
+import DialogsContainer from "./components/Dialogs/DialogsContainer";
+
 
 const App = (props) => {
     return (
@@ -25,18 +25,13 @@ const App = (props) => {
     path = "/Profile"
     render = {()=><
     Profile
-    dispatch = {props.dispatch}
-    newPostText = {props.state.profilePage.newPostText}
-    message = {props.state.profilePage.message}
+    store={props.store}
     /> } / >
     < Route
     path = "/Dialogs"
     render = {()=><
-    Dialogs
-    newMessageText = {props.state.dialogsPage.newMessageText}
-    dispatch = {props.dispatch}
-    dialogsData = {props.state.dialogsPage.dialogsData}
-    messageData = {props.state.dialogsPage.messageData}
+    DialogsContainer
+    store={props.store}
     /> }  / >
     < Route
     path = "/Music"
