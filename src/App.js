@@ -16,22 +16,22 @@ const App = (props) => {
         < section
     className = "app-wrapper" >
         < Header / >
-        < Nav
-    nameFriend = {props.state.friends.nameFriend}
+        < Nav store = {props.store}
+   // nameFriend = {props.state.friends.nameFriend}
     />
     < div
     className = "app-wrapper-content" >
         < Route
     path = "/Profile"
-    render = {()=><
+    render = {() => <
     Profile
-    store={props.store}
+    store = {props.store}
     /> } / >
     < Route
     path = "/Dialogs"
-    render = {()=><
+    render = {() => <
     DialogsContainer
-    store={props.store}
+    store = {props.store}
     /> }  / >
     < Route
     path = "/Music"
